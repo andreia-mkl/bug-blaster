@@ -17,18 +17,16 @@ export default function TicketItem({ ticket, dispatch }) {
 
       <button
         className="button"
-        onClick={() => {
-          /* delete ticket */
-        }}
+        onClick={() => dispatch({ type: "DELETE_TICKET", payload: { id } })}
       >
         Delete
       </button>
 
       <button
         className="button"
-        onClick={() => {
-          /* edit ticket */
-        }}
+        onClick={() =>
+          dispatch({ type: "SET_EDITING_TICKET", payload: ticket })
+        }
       >
         Edit
       </button>
