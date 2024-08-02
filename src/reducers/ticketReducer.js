@@ -9,7 +9,7 @@ export default function ticketReducer(state, action) {
           ticket.is === action.payload.id ? action.payload : ticket
         ),
       };
-    case "DELETE_TCIKET":
+    case "DELETE_TICKET":
       return {
         ...state,
         tickets: state.tickets.filter(
